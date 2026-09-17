@@ -1,0 +1,15 @@
+{
+	"$schema": "https://apify.com/schemas/v1/actor.ide.json",
+	"actorSpecification": 1,
+	"name": "b2b-lead-enricher",
+	"title": "B2B Lead & Contact Deep Enricher (Email, Socials & Google Maps)",
+	"description": "Extract verified business emails, phone numbers, and social profiles (LinkedIn, Instagram, Facebook, Twitter/X, TikTok) from Google Maps searches or bulk company websites.",
+	"version": "1.0",
+	"categories": [
+		"LEAD_GENERATION",
+		"MARKETING",
+		"BUSINESS"
+	],
+	"inputSchema": "./input_schema.json",
+	"dockerfile": "../Dockerfile"
+}

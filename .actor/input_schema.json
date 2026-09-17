@@ -1,0 +1,56 @@
+{
+    "$schema": "https://apify.com/schemas/v1/input.ide.json",
+    "title": "B2B Lead & Contact Deep Enricher Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "searchQueries": {
+            "title": "Google Maps Search Queries",
+            "type": "array",
+            "description": "Search queries to look up on Google Maps (e.g., 'Software companies in Warsaw', 'Gyms Berlin', 'Dentists London').",
+            "editor": "stringList",
+            "prefill": [
+                "Software houses in Warsaw"
+            ]
+        },
+        "directUrls": {
+            "title": "Direct Company Websites (Bulk Enrichment)",
+            "type": "array",
+            "description": "If you already have a list of website URLs, enter them here to extract emails, phones, and social links directly.",
+            "editor": "stringList",
+            "prefill": []
+        },
+        "maxPlacesPerQuery": {
+            "title": "Max Results Per Query",
+            "type": "integer",
+            "description": "Maximum number of Google Maps places to process per search query.",
+            "minimum": 1,
+            "maximum": 500,
+            "default": 20
+        },
+        "deepWebsiteEnrichment": {
+            "title": "Deep Website Crawl (Emails & Socials)",
+            "type": "boolean",
+            "description": "Visit each business website (homepage + contact/about pages) to extract verified direct emails and social media profiles.",
+            "default": true
+        },
+        "extractEmails": {
+            "title": "Extract Emails",
+            "type": "boolean",
+            "description": "Extract all business and contact emails, automatically filtering out dummy and image files.",
+            "default": true
+        },
+        "extractSocials": {
+            "title": "Extract Social Links",
+            "type": "boolean",
+            "description": "Extract LinkedIn, Instagram, Facebook, Twitter/X, YouTube, and TikTok profiles.",
+            "default": true
+        },
+        "extractPhones": {
+            "title": "Extract Phone Numbers",
+            "type": "boolean",
+            "description": "Extract telephone numbers from Google Maps and website pages.",
+            "default": true
+        }
+    }
+}
