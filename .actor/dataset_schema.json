@@ -2,50 +2,20 @@
     "$schema": "https://apify.com/schemas/v1/dataset.ide.json",
     "actorSpecification": 1,
     "fields": {
-        "title": {
-            "type": "string",
-            "description": "Business or company name"
-        },
-        "category": {
-            "type": "string",
-            "description": "Business category"
-        },
-        "rating": {
-            "type": "number",
-            "description": "Google Maps rating (1-5)"
-        },
-        "reviewsCount": {
-            "type": "integer",
-            "description": "Total reviews count"
-        },
-        "address": {
-            "type": "string",
-            "description": "Physical street address"
-        },
-        "phone": {
-            "type": "string",
-            "description": "Phone number from Google Maps"
-        },
-        "website": {
-            "type": "string",
-            "description": "Official company website URL"
-        },
-        "googleMapsUrl": {
-            "type": "string",
-            "description": "Google Maps direct place URL"
-        },
-        "emails": {
-            "type": "array",
-            "description": "Verified direct emails extracted from the website"
-        },
-        "phones": {
-            "type": "array",
-            "description": "Phone numbers extracted from website and Maps"
-        },
-        "socials": {
-            "type": "object",
-            "description": "Social media handles (LinkedIn, Instagram, Facebook, Twitter, YouTube, TikTok)"
-        }
+        "query": "Search query used on Google Maps",
+        "title": "Business or company name",
+        "category": "Business category",
+        "rating": "Google Maps rating (1 to 5)",
+        "reviewsCount": "Total reviews count",
+        "address": "Physical street address",
+        "phone": "Phone number from Google Maps",
+        "website": "Company website URL",
+        "googleMapsUrl": "Google Maps direct place URL",
+        "emails": "Verified direct contact emails extracted from website",
+        "phones": "Phone numbers extracted from website and Maps",
+        "socials": "Social media profiles (LinkedIn, Instagram, Facebook, Twitter, YouTube, TikTok)",
+        "enriched": "Whether deep website crawl succeeded",
+        "scrapedAt": "ISO timestamp of extraction"
     },
     "views": {
         "overview": {
