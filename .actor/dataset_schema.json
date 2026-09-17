@@ -1,23 +1,96 @@
 {
     "$schema": "https://apify.com/schemas/v1/dataset.ide.json",
     "actorSpecification": 1,
-    "fields": {},
+    "fields": {
+        "title": {
+            "type": "string",
+            "description": "Business or company name"
+        },
+        "category": {
+            "type": "string",
+            "description": "Business category"
+        },
+        "rating": {
+            "type": "number",
+            "description": "Google Maps rating (1-5)"
+        },
+        "reviewsCount": {
+            "type": "integer",
+            "description": "Total reviews count"
+        },
+        "address": {
+            "type": "string",
+            "description": "Physical street address"
+        },
+        "phone": {
+            "type": "string",
+            "description": "Phone number from Google Maps"
+        },
+        "website": {
+            "type": "string",
+            "description": "Official company website URL"
+        },
+        "googleMapsUrl": {
+            "type": "string",
+            "description": "Google Maps direct place URL"
+        },
+        "emails": {
+            "type": "array",
+            "description": "Verified direct emails extracted from the website"
+        },
+        "phones": {
+            "type": "array",
+            "description": "Phone numbers extracted from website and Maps"
+        },
+        "socials": {
+            "type": "object",
+            "description": "Social media handles (LinkedIn, Instagram, Facebook, Twitter, YouTube, TikTok)"
+        }
+    },
     "views": {
         "overview": {
             "title": "Overview",
             "transformation": {
-                "fields": ["title", "url"]
+                "fields": [
+                    "title",
+                    "category",
+                    "rating",
+                    "phone",
+                    "emails",
+                    "website",
+                    "address"
+                ]
             },
             "display": {
                 "component": "table",
                 "properties": {
                     "title": {
-                        "label": "Title",
+                        "label": "Business Name",
                         "format": "text"
                     },
-                    "url": {
-                        "label": "URL",
+                    "category": {
+                        "label": "Category",
+                        "format": "text"
+                    },
+                    "rating": {
+                        "label": "Rating",
+                        "format": "number"
+                    },
+                    "phone": {
+                        "label": "Phone",
+                        "format": "text"
+                    },
+                    "emails": {
+                        "label": "Emails",
+                        "format": "text"
+                    },
+                    "website": {
+                        "label": "Website",
                         "format": "link"
+                    },
+                    "address": {
+                        "label": "Address",
+                        "format": "text"
                     }
                 }
             }
